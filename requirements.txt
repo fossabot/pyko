@@ -1,0 +1,5 @@
+socket
+scapy
+platform
+mysql
+mysql.connector
