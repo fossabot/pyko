@@ -1,0 +1,2 @@
+from pyko import *
+clear()
