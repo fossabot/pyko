@@ -35,10 +35,8 @@ class Hackerman:
         self.ftp_port = 21 # Default
         # Set port to use
         self.port = None # Default
-    def info(self):
-        pass
     def server(self):
-        s.bind('', self.port)
+        s.bind(('', self.port))
         s.listen(5)
         print(f"{B} [+] {W} Server created in {self.port}")
         while True:
