@@ -2,6 +2,7 @@
 # Author: Mrx04programmer
 # Github : https://github.com/mrx04programmer
 from hacking.hackerman import *
+from hacking.zombies import *
 from dev.colors import *
 from dev.mm import *
 import platform
