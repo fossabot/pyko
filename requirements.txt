@@ -1,5 +1,5 @@
-socket
+#socket
 scapy
-platform
+#platform
 mysql
 mysql.connector
