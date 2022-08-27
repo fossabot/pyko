@@ -1,13 +1,13 @@
 ## Zombies 
 # Author : Mrx04programmer
 # Github : https://github.com/mrx04programmer
-import requests, os, random, string
+import requests, platform, random, string, os
 from dev.colors import *
 ## T and ZMB Is the extension for Module Zombies
 
 r = requests
 host_objective = None
-
+sh = os.system
 user_agent = 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Mobile Safari/537.36)'
 def create_zombie(name, host, port):
     print(f"{O}[+] {W}Creating zombie {name}")
@@ -77,4 +77,9 @@ def zombiesAttack(zombie, objective_with_or_without_port, method):
         print(f"{R}[INFO] {W} Web not vulnerable")
         #print(f"{R}[INFO] {W} Web not vulnerable, {e}")
 def clearZombies():
-    sh('rm *.yml')
+    if platform.system() == '':
+        sh('rm *.yml')
+    elif 'w' in platform.system() or 'W' in platform.system():
+        sh('rmdir *.yml')
+    else:
+        sh('rm *.yml')
